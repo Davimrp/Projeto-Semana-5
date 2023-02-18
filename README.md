@@ -21,7 +21,7 @@
  
   ### ✒️ Autores
  > <a href="https://github.com/Davimrp">Davi Wendell</a> <br>
- > <a href="https://github.com/PabloDamato">Pablo da Mato</a> <br>
+ > <a href="https://github.com/PabloDamato">Pablo Gomes</a> <br>
   
   <hr>
   
