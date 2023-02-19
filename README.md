@@ -28,3 +28,5 @@
 ### 🖱 O Projeto:
 ![port](https://user-images.githubusercontent.com/119756640/219902883-8e93d825-f640-4e88-9af2-7792f8abde46.png)
 
+### Estado atual do projeto
+https://davimrp.github.io/Projeto-portifolio/
