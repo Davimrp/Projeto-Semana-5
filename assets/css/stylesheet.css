@@ -32,6 +32,13 @@ header {
 nav a {
     color: #f9f9f9;
     margin-left: 4.5rem;
+    text-decoration: none;
+    padding: 15px 0 15px 0;
+}
+
+nav a:hover{
+    color: #00DF5E;
+    transition: all .5s;
 }
 
 /*Classes utilitárias----------------------------------------------------------------------------*/
@@ -78,6 +85,7 @@ main {
 button {
     width: 14.3rem;
     height: 4.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.932);
 }
 
 .btn-black {
@@ -87,12 +95,26 @@ button {
     background: #00DF5E;
 }
 
+.btn-black:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #0d9747;
+    transition: background-color 1s, color .5s;
+}
+
 .btn-white {
     color: #F9F9F9;
     font-weight: 500;
     font-size: 1.4rem;
     background: #171717;
     border: 0.1rem solid #333333;
+}
+
+.btn-white:hover{
+    cursor: pointer;
+    background-color: rgb(219, 219, 219);
+    color: black;
+    transition: background-color .8s, color .5s;
 }
 
 p {
@@ -150,12 +172,30 @@ p {
     grid-template-columns: auto auto auto;
 }
 
-#row {
+.grid__projeto1__img{
+    max-width: 114rem;
+}
+
+.grid__projeto1__img img{
+    width: 100%;
+}
+
+.row {
     width: 35rem;
     height: 24rem;
     background: #212121;
     border: 1px solid #333333;
     padding: 2rem 2.5rem 2rem 2.5rem;
+}
+
+.row:hover{
+    cursor: pointer;
+    border: 1px solid rgb(37, 36, 36);
+    box-shadow: 1px 1px 2px #00df5d65;
+    padding: 0;
+    text-align: center;
+    font-size: 1.7rem;
+    transition: all 1s;
 }
 
 /*Serviços---------------------------------------------------------------------------------------*/
@@ -221,9 +261,9 @@ p {
 
 footer {
     background: #212121;
-    height: 6rem;
+    height: 5rem;
+    width: 100vw;
     text-align: center;
-    max-width: 114rem;
     margin: auto;
 }
 
