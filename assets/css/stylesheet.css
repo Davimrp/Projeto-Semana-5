@@ -24,7 +24,7 @@ h1,h2 {
 /*header----------------------------------------------------------------------------------------*/
 
 header {
-    max-width: 114rem;
+    width: 70%;
     margin: auto;
     padding-top: 4rem;
 }
@@ -58,13 +58,13 @@ nav a:hover{
 /*main-------------------------------------------------------------------------------------------*/
 
 main {
-    max-width: 114rem;
+    width: 70%;
     margin: auto;
 }
 
 .box1 {
     align-items: center;
-    margin-top: 14.3rem;
+    margin: 14.3rem 0 14.3rem 0;
 }
 
 .box1__area-curriculo h2 {
@@ -83,8 +83,9 @@ main {
 }
 
 button {
-    width: 14.3rem;
-    height: 4.2rem;
+    width: 25%;
+    height: 40px;
+    min-width: 135px;
     border: 1px solid rgba(0, 0, 0, 0.932);
 }
 
@@ -126,10 +127,9 @@ p {
 
 .sobre-mim {
     text-align: center;
-    width: 74.5rem;
+    width: 65%;
     height: 16rem;
     margin: auto;
-    margin-top: 16.9rem;
 }
 
 .sobre-mim h2 {
@@ -145,7 +145,8 @@ p {
 /*contatos---------------------------------------------------------------------------------------*/
 
 .contatos {
-    margin-top: 8.5rem;
+    width: 90%;
+    margin: 8.5rem auto;
 }
 
 .contatos__meu-nome, .contatos__email, .contatos__instagram, .contatos__telefone  {
@@ -156,7 +157,8 @@ p {
 /*projetos---------------------------------------------------------------------------------------*/
 
 .projetos {
-    max-width: 114rem;
+    width: 100%;
+    margin: auto;
     margin-top: 12.7rem;
 }
 
@@ -169,11 +171,12 @@ p {
     display: grid;
     gap: 4.5rem;
     justify-content:center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 .grid__projeto1__img{
-    max-width: 114rem;
+    max-width: 100%;
 }
 
 .grid__projeto1__img img{
@@ -181,8 +184,8 @@ p {
 }
 
 .row {
-    width: 35rem;
-    height: 24rem;
+    width: 100%;
+    height: 100%;
     background: #212121;
     border: 1px solid #333333;
     padding: 2rem 2.5rem 2rem 2.5rem;
@@ -201,19 +204,25 @@ p {
 /*Serviços---------------------------------------------------------------------------------------*/
 
 .servicos {
-    margin-top: 12.7rem;
+    margin: 12.7rem 0 ;
+    max-width: 100%;
+}
+
+.servicos__grid-column{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 45px;
 }
 
 .__servicos__box {
     box-sizing: border-box;
-    margin-top: 3rem;
-    margin-right: 4.5rem;
-    margin-bottom: 12.7rem;
-    width: 35rem;
+    width: 100%;
     height: 24rem;
     background: #212121;
     border: 1px solid #333333;
     border-bottom: 0.5rem solid #00DF5E;
+    margin: 50px auto;
 }
 
 .__servicos__box p {
@@ -246,7 +255,7 @@ p {
 .minhas-skills__box {
     box-sizing: border-box;
     margin-right: 4.8rem;
-    width: 15rem;
+    width: 85%;
     height: 15rem;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
