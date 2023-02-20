@@ -11,13 +11,13 @@
     <title>Projeto Portifólio</title>
 </head>
 <body>
-    <header class="grid column">
+    <header class="grid column" id="header">
         <h1>Portifólio</h1>
         <nav class="text-right">
-            <a href="#">Sobre mim</a>
-            <a href="#">Projetos</a>
-            <a href="#">Serviços</a>
-            <a href="#">Minhas Skills</a>
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#minhas-skills">Minhas Skills</a>
         </nav>
     </header>
 
@@ -36,7 +36,7 @@
             </div>
         </section>
 
-        <section class="sobre-mim">
+        <section class="sobre-mim" id="sobre-mim">
             <h2>Sobre mim</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quisquam esse voluptate laboriosam repellat quidem vel, inventore obcaecati aut. Unde vero sed laboriosam quidem quisquam in ex vitae atque eveniet!</p>
         </section>
@@ -64,7 +64,7 @@
             </div>
         </section>
 
-        <section class="projetos">
+        <section class="projetos" id="projetos">
             <h2>Projetos</h2>
             <div class="projetos__grid">
                 <div class="row" class="projetos__grid__projeto1">
@@ -100,7 +100,7 @@
             </div>
         </section>
 
-        <section class="servicos">
+        <section class="servicos" id="servicos">
             <h2>Serviços</h2>
             <div class="container-servicos grid column">
                 <div class="__servicos__box">
@@ -118,7 +118,7 @@
             </div>
         </section>
 
-        <section class="minhas-skills">
+        <section class="minhas-skills" id="minhas-skills">
             <h2>Minhas skills</h2>
             <div class="container-minhas-skills grid column">
                 <div class="minhas-skills__box">
@@ -148,5 +148,9 @@
             Este projeto é um portifólio fictício, e foi codado por <a href="https://github.com/Davimrp" target="_blank">Davi Wendell</a> e <a href="https://github.com/PabloDamato" target="_blank">Pablo Gomes</a>
         </p>
     </footer>
+
+    <div class="topo">
+        <a href="#header"><img src="assets/imgs/de-volta-ao-topo.png" alt="icon seta para o topo"></a>
+    </div>
 </body>
 </html>
