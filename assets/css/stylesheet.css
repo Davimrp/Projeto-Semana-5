@@ -137,21 +137,24 @@ p {
     margin-bottom: 3rem;
 }
 
-.p-titulo {
-    font-weight: 500;
-    color: #FFFFFF;
-}
-
 /*contatos---------------------------------------------------------------------------------------*/
 
 .contatos {
     width: 90%;
     margin: 8.5rem auto;
+    gap: 15px;
+    display: grid;
+    justify-content:center;
+    grid-template-columns: repeat(auto-fit, minmax(89px, 1fr));
 }
 
 .contatos__meu-nome, .contatos__email, .contatos__instagram, .contatos__telefone  {
-    align-items: center;
     text-align: center;
+}
+
+.p-titulo {
+    font-weight: 500;
+    color: #FFFFFF;
 }
 
 /*projetos---------------------------------------------------------------------------------------*/
@@ -171,8 +174,7 @@ p {
     display: grid;
     gap: 4.5rem;
     justify-content:center;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .grid__projeto1__img{
@@ -211,8 +213,8 @@ p {
 .servicos__grid-column{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .__servicos__box {
@@ -263,7 +265,9 @@ p {
     background: #212121;
     border: 1px solid #333333;
     text-align: center;
-    display: block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 /*footer-----------------------------------------------------------------------------------------*/
@@ -304,3 +308,249 @@ footer a:hover{
 .topo:hover{
     cursor: pointer;
 }
+
+/*media queries-----------------------------------------------------------------------------------*/
+
+@media (max-width: 1130px) {
+    .contatos {
+        gap: 30px;
+        display: grid;
+        justify-content:center;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .box1 {
+        gap: 50px;
+    }
+
+    .box1__area-curriculo p {
+        font-size: 15px;
+    }
+
+    .box1__area-curriculo h2 {
+        font-size: 3rem;
+    }
+    
+    .sobre-mim {
+        font-size: 12px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 25px;
+    }
+
+    .contatos {
+        font-size: 12px;
+    }
+
+    .projetos {
+        font-size: 12px;
+    }
+
+    .projetos h2 {
+        font-size: 25px;
+    }
+
+    .servicos {
+        font-size: 12px;
+    }
+
+    .servicos h2 {
+        font-size: 25px;
+    }
+    
+    .servicos__grid-column {
+        width: 100%;
+        display: grid;
+        grid-gap: 45px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .__servicos__box p {
+        font-size: 24px;
+    }
+
+    .minhas-skills  h2 {
+        font-size: 25px;
+    }
+
+    .container-minhas-skills {
+        grid-auto-flow: unset;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 21px;
+        margin-bottom: 5.6rem;
+    }
+
+    .minhas-skills__box {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .one-sobre-mim, .two-projetos, .three-servicos, .four-minhas-skills {
+        background-color: #FFFFFF;
+        height: 3px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-left: auto;
+
+    }
+
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #333333;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 120px;
+        top: 50px;
+    }
+    
+    .menu-section.on .menu-toggle .one-sobre-mim {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-section.on .menu-toggle .two-projetos {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three-servicos {
+        transform: rotate(-45deg) translate(7px, -9px);
+    }
+
+    .menu-section.on .menu-toggle .four-minhas-skills {
+        opacity: 0;
+    }
+
+    .menu-section.on nav {
+        text-align: center;
+        display: grid;
+    }
+
+    .menu-section.on nav a {
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+    }
+
+    #header h1 {
+        font-size: 20px;
+    }
+
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        margin: 5rem 0 5rem 0;
+    }
+    .box1__area-curriculo {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .box1__area-curriculo h2 {
+        font-size: 3.6rem;
+        width: 100%;
+        text-align: center;
+        height: auto;
+        padding: 10px;;
+    }
+
+    .box1__area-curriculo p {
+        font-size: 2.5rem;
+        text-align: center;
+        height: auto;
+        padding: 5px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .box1__area-curriculo button {
+        margin-top: 3.5rem;
+        font-size: 18px;
+        width: 50%;
+    }
+ 
+    .box1__area-curriculo__flex {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .box1__imagem {
+        display: none;
+    }
+
+    .sobre-mim {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .sobre-mim h2 {
+        font-size: 3.2rem;
+    }
+
+    .contatos {
+        gap: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .projetos h2 {
+        font-size: 3.2rem;
+    }
+
+    .servicos h2 {
+        font-size: 3.2rem;
+    }
+
+    .servicos__grid-column {
+        grid-template-columns: auto;
+    }
+
+    .__servicos__box {
+        margin: auto;
+        text-align: center;
+    }
+
+    .__servicos__box > p {
+        text-align: center;
+        width: auto;
+    }
+
+    .minhas-skills h2 {
+        font-size: 3.2rem;
+    }
+}
+
