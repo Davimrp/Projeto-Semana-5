@@ -13,18 +13,29 @@
 <body>
     <header class="grid column" id="header">
         <h1>Portifólio</h1>
-        <nav class="text-right">
-            <a href="#sobre-mim">Sobre mim</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#minhas-skills">Minhas Skills</a>
-        </nav>
+
+        <div class="container">
+            <div class="menu-section">
+                <div class="menu-toggle">
+                    <div class="one-sobre-mim"></div>
+                    <div class="two-projetos"></div>
+                    <div class="three-servicos"></div>
+                    <div class="four-minhas-skills"></div>
+                </div>
+                <nav class="text-right">
+                    <a href="#sobre-mim">Sobre mim</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#minhas-skills">Minhas Skills</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="box1 grid column">
             <div class="box1__area-curriculo ">
-                <h2>Olá, eu sou o candidato :)</h2>
+                <h2>Olá, eu sou o Fulano :)</h2>
                 <p>Desenvolvedor Front-End & UI Designer</p>
                 <div class="box1__area-curriculo__flex">
                     <button class="btn-black">Download CV</button>
@@ -41,7 +52,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quisquam esse voluptate laboriosam repellat quidem vel, inventore obcaecati aut. Unde vero sed laboriosam quidem quisquam in ex vitae atque eveniet!Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, impedit aliquam esse asperiores, optio porro expedita, quibusdam libero aperiam vitae ipsam voluptas facere! Officiis, iste vel? Eveniet vel ut sequi.</p>
         </section>
 
-        <section class="contatos grid column">
+        <section class="contatos">
             <div class="contatos__meu-nome">
                 <img src="assets/imgs/smile.svg" alt="icon smile">
                 <p class="p-titulo">Meu nome</p>
@@ -69,7 +80,7 @@
             <div class="projetos__grid">
                 <div class="row" class="projetos__grid__projeto1">
                     <div class="grid__projeto1__img"><img src="assets/imgs/port.png" alt=""></div>
-                    <p class="p-titulo">Projeto Portifólio ficticio</p>
+                    <p class="p-titulo">Título do projeto</p>
                     <p>Tecnologias: HTML, CSS e JS</p>
                 </div>
                 <div class="row" class="projetos__grid__projeto2">
@@ -152,5 +163,6 @@
     <div class="topo">
         <a href="#header"><img src="assets/imgs/setabranca.png" alt="icon seta para o topo"></a>
     </div>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url(animation.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +29,7 @@ header {
     width: 70%;
     margin: auto;
     padding-top: 4rem;
+    animation: text-focus-in 2s;
 }
 
 nav a {
@@ -65,6 +68,7 @@ main {
 .box1 {
     align-items: center;
     margin: 14.3rem 0 14.3rem 0;
+    animation: scale-up-center 3s
 }
 
 .box1__area-curriculo h2 {
@@ -129,7 +133,8 @@ p {
     text-align: center;
     width: 65%;
     height: 16rem;
-    margin: auto;
+    margin: 120px auto;
+    animation: tracking-in-expand-fwd 4s;
 }
 
 .sobre-mim h2 {
@@ -137,21 +142,25 @@ p {
     margin-bottom: 3rem;
 }
 
-.p-titulo {
-    font-weight: 500;
-    color: #FFFFFF;
-}
-
 /*contatos---------------------------------------------------------------------------------------*/
 
 .contatos {
     width: 90%;
     margin: 8.5rem auto;
+    gap: 15px;
+    display: grid;
+    justify-content:center;
+    grid-template-columns: repeat(auto-fit, minmax(89px, 1fr));
+    animation: scale-in-hor-center 3s
 }
 
 .contatos__meu-nome, .contatos__email, .contatos__instagram, .contatos__telefone  {
-    align-items: center;
     text-align: center;
+}
+
+.p-titulo {
+    font-weight: 500;
+    color: #FFFFFF;
 }
 
 /*projetos---------------------------------------------------------------------------------------*/
@@ -160,6 +169,7 @@ p {
     width: 100%;
     margin: auto;
     margin-top: 12.7rem;
+    animation: scale-in-hor-center 3s
 }
 
 .projetos h2 {
@@ -171,8 +181,7 @@ p {
     display: grid;
     gap: 4.5rem;
     justify-content:center;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .grid__projeto1__img{
@@ -194,7 +203,7 @@ p {
 .row:hover{
     cursor: pointer;
     border: 1px solid rgb(37, 36, 36);
-    box-shadow: 1px 1px 2px #00df5d65;
+    border:2px solid #00df5d1c;
     padding: 0;
     text-align: center;
     font-size: 1.7rem;
@@ -202,17 +211,17 @@ p {
 }
 
 /*Serviços---------------------------------------------------------------------------------------*/
-
 .servicos {
     margin: 12.7rem 0 ;
     max-width: 100%;
+    animation: scale-in-hor-center 3s
 }
 
 .servicos__grid-column{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .__servicos__box {
@@ -223,6 +232,7 @@ p {
     border: 1px solid #333333;
     border-bottom: 0.5rem solid #00DF5E;
     margin: 50px auto;
+    z-index: 1;
 }
 
 .__servicos__box p {
@@ -263,7 +273,9 @@ p {
     background: #212121;
     border: 1px solid #333333;
     text-align: center;
-    display: block;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 /*footer-----------------------------------------------------------------------------------------*/
@@ -299,8 +311,449 @@ footer a:hover{
 }
 .topo img{
     width: 100%;
+    opacity: 10%;
 }
 
 .topo:hover{
     cursor: pointer;
+}
+
+/*media queries-----------------------------------------------------------------------------------*/
+
+@media (min-width: 1500px){
+    .projetos__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contatos {
+        gap: 30px;
+        display: grid;
+        justify-content:center;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .servicos__grid-column {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .__servicos__box p{
+        font-size: 2.5rem;
+    }
+
+    .topo{
+        left: 92%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .box1 {
+        gap: 50px;
+    }
+
+    .box1__area-curriculo p {
+        font-size: 15px;
+    }
+
+    .box1__area-curriculo h2 {
+        font-size: 3rem;
+    }
+    
+    .sobre-mim {
+        font-size: 12px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 25px;
+    }
+
+    .contatos {
+        font-size: 12px;
+    }
+
+    .projetos {
+        font-size: 12px;
+    }
+
+    .projetos h2 {
+        font-size: 25px;
+    }
+
+    .servicos {
+        font-size: 12px;
+    }
+
+    .servicos h2 {
+        font-size: 25px;
+    }
+    
+    .servicos__grid-column {
+        width: 100%;
+        display: grid;
+        grid-gap: 45px;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+
+    .__servicos__box p {
+        font-size: 24px;
+    }
+
+    .minhas-skills  h2 {
+        font-size: 25px;
+    }
+
+    .container-minhas-skills {
+        grid-auto-flow: unset;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 21px;
+        margin-bottom: 5.6rem;
+    }
+
+    .minhas-skills__box {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .servicos__grid-column {
+        justify-content: center;
+        grid-template-columns: 450px;
+    }
+
+    .__servicos__box{
+        display: flex;
+        align-items: center;
+        margin: auto;
+    }
+
+    .__servicos__box p{
+        margin-top: 50px;
+    }
+
+    .topo{
+        width: 60px;
+        left: 92%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .one-sobre-mim, .two-projetos, .three-servicos, .four-minhas-skills {
+        background-color: #FFFFFF;
+        height: 3px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 30px;
+        margin-left: auto;
+
+    }
+
+    .menu-section.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #333333;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-section.on nav {
+        display: block;
+    }
+
+    .menu-section.on .menu-toggle {
+        position: absolute;
+        right: 120px;
+        top: 50px;
+    }
+    
+    .menu-section.on .menu-toggle .one-sobre-mim {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-section.on .menu-toggle .two-projetos {
+        opacity: 0;
+    }
+
+    .menu-section.on .menu-toggle .three-servicos {
+        transform: rotate(-45deg) translate(7px, -9px);
+    }
+
+    .menu-section.on .menu-toggle .four-minhas-skills {
+        opacity: 0;
+    }
+
+    .menu-section.on nav {
+        text-align: center;
+        display: grid;
+    }
+
+    .menu-section.on nav a {
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+    }
+
+    #header h1 {
+        font-size: 20px;
+    }
+
+    .box1 {
+        margin: 10rem 0 10rem 0;
+    }
+
+    .box1__area-curriculo h2 {
+        width: 100%;
+        text-align: center;
+        height: auto;
+        padding: 10px;;
+    }
+
+    .box1__area-curriculo p {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .box1__area-curriculo button {
+        font-size: 18px;
+        width: 50%;
+        height: 4.5rem;
+    }
+
+    .box1__area-curriculo__flex {
+        display: flex;
+        gap: 10px;
+    }
+
+    .box1__imagem {
+        display: none;
+    }
+
+    .sobre-mim {
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 150px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 3.2rem;
+    }
+
+    .contatos {
+        gap: 20px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+
+    .projetos h2 {
+        font-size: 3.2rem;
+    }
+    
+    .servicos__grid-column{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    
+
+    .__servicos__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .__servicos__box p {
+        margin: 0px;
+        width: 100%;
+        font-size: 3rem;
+        text-align: center;
+
+    }
+    
+    .__servicos__box img {
+        margin: 20px;
+    }
+    
+
+    .servicos h2 {
+        font-size: 3.2rem;
+    }
+
+    .topo{
+        width: 60px;
+        left: 91%;
+    }
+
+
+    @media (max-width: 630px) {
+
+        main{
+            width: 80%;
+        }
+
+        .box1__area-curriculo__flex{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box1__area-curriculo p{
+            margin-bottom: 40px;
+        }
+
+        .box1__area-curriculo button {
+            margin: 0;
+            width: 80%;
+            height: 5.5rem;
+            margin-top: 5px;
+        }
+
+        .minhas-skills__box{
+            width: 90%;
+            height: 90%;
+        }
+
+        .minhas-skills__box img{
+            width: 90%;
+            height: 100%;
+        }
+
+        footer{
+            font-size: 1.2rem;
+        }
+
+        .projetos__grid p {
+            text-align: center;
+            font-size: large;
+            margin-top: 10px;
+        }
+
+        .topo{
+            width: 55px;
+            left: 89%;
+        }
+    }
+}
+
+@media (max-width: 425px){
+    
+    .box1__area-curriculo h2{
+        font-size: 2.2rem;
+        width: 100%;
+        height: 9.4rem;
+        margin-bottom: -40px;
+    }
+    
+    .box1__area-curriculo p {
+        font-size: 1.8rem;
+        width: 95%;
+        margin: 10px auto;
+    }
+    
+    .box1__area-curriculo button {
+        margin-top: 5px;
+        width: 25rem;
+    }
+
+    .sobre-mim{
+        margin-top: -20px;
+    }
+
+    .sobre-mim h2{ 
+        font-size: 2.2rem;
+    }
+
+    .sobre-mim p {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    
+    .contatos {
+        width: 100%;
+        margin-top: 230px;
+        row-gap: 50px;
+        justify-content:center;
+        grid-template-columns: 1fr 1fr
+    }
+
+    .p-titulo{
+        font-size: 1.4rem;
+    }
+    
+    .projetos h2{ 
+        font-size: 2.5rem;
+    }
+
+    .row{
+        padding: 5px;
+    }
+
+    .servicos__grid-column{
+        gap: 10px;
+    }
+
+    .__servicos__box {
+        height: 80%;
+    }
+    
+    .__servicos__box p {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+    
+    .minhas-skills{
+        margin-top: -20%;
+    }
+
+    .minhas-skills h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .minhas-skills__box{
+        width: 100%;
+        height: 80%;
+    }
+
+    .minhas-skills__box img{
+        width: 90%;
+        height: 90%;
+        margin: auto;
+    }
+
+    footer{
+        font-size: 0.9rem;
+
+    }
+
+    .topo{
+        width: 55px;
+        left: 88%;
+    }
+
+    .topo img{
+        width: 85%;
+    }
+
 }

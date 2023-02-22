@@ -1,0 +1,62 @@
+@keyframes tracking-in-expand-fwd {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(5px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        opacity: 0%;
+        filter: blur(5px);
+        transform: scale(0.5);
+    }
+
+    50%{
+        opacity: 30%;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 100%;
+        filter: blur(0px);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-in-hor-center {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
