@@ -134,7 +134,7 @@ p {
     width: 65%;
     height: 16rem;
     margin: 120px auto;
-    animation: tracking-in-expand-fwd 5s;
+    animation: tracking-in-expand-fwd 4s;
 }
 
 .sobre-mim h2 {
@@ -169,6 +169,7 @@ p {
     width: 100%;
     margin: auto;
     margin-top: 12.7rem;
+    animation: scale-in-hor-center 3s
 }
 
 .projetos h2 {
@@ -213,6 +214,7 @@ p {
 .servicos {
     margin: 12.7rem 0 ;
     max-width: 100%;
+    animation: scale-in-hor-center 3s
 }
 
 .servicos__grid-column{
