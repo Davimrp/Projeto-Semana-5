@@ -475,6 +475,7 @@ footer a:hover{
         height: 30px;
         margin-left: auto;
         cursor: pointer;
+        touch-action: manipulation;
     }
 
     .menu-section.on {
