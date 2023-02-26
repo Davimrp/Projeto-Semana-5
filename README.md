@@ -1,22 +1,21 @@
 # Projeto-Semana-5
 
-> :construction: Projeto em construção :construction:
-<hr>
-
 ### 🚀 Surgimento do projeto
 >Este Projeto faz parte de uma dinânica de treinamento, onde toda semana nós sorteamos duplas e essas duplas devem trabalhar em equipe, com o intuíto de construir um site que é escolhido pela dupla após ela ser sorteada.
 
 <hr>
 
 ### 📋 Descrição do projeto
-> 
+> Trata-se de uma simulação de site de portfolio. <br>
+Portfolio é uma lista de trabalhos de um profissional, empresa ou estudante. <br>
+Para este projeto, usamos um tema dark, com o padrão de cores preto e verde, menu de navegação pela pagina, botao para voltar ao topo, hover's, animações de entrada e mais detalhes.
 
 <hr>
 
-### 🛠️ Construído com
+### 🛠️ Tecnologias
 >HTML5 <br>
 >CSS 3 e <br>
->JavaScript Puro
+>JavaScript
 <hr>
  
   ### ✒️ Autores
@@ -25,8 +24,10 @@
   
   <hr>
   
-### 🖱 O Projeto:
-![port](https://user-images.githubusercontent.com/119756640/219902883-8e93d825-f640-4e88-9af2-7792f8abde46.png)
+### 🖱 Resultado:
 
-### Estado atual do projeto
+https://user-images.githubusercontent.com/119756640/221427525-796ab9b8-e893-4eef-8a59-addeefe4bfba.mp4
+  <hr>
+
+### 💻 Acesse:
 https://portifolio-ficticio.netlify.app
